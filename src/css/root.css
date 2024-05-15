@@ -1,0 +1,17 @@
+:root {
+  /* COLORS */
+  --primary: #153448;
+  --secondary: #1d3f55;
+  --accent: #284d66;
+  --accent-dark: #112431;
+  /* GENERAL */
+  --text-light: #fff;
+  --text-accent: #ffff00;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}

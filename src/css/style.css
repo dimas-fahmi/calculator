@@ -1,0 +1,70 @@
+body {
+  background-color: var(--primary);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 2rem;
+  color: var(--text-light);
+}
+
+.highlighted {
+  color: var(--text-accent);
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 5rem);
+  grid-template-rows: minmax(6rem, auto) repeat(5, 5rem);
+  gap: 1px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -2px 4px 13px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 4px 13px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 4px 13px 4px rgba(0, 0, 0, 0.75);
+
+  & > .output {
+    grid-column: 1/-1;
+    padding: 5px 8px;
+    display: flex;
+    text-align: end;
+    justify-content: space-around;
+    flex-direction: column;
+    color: var(--text-light);
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: var(--accent-dark);
+
+    & > .previous-operand {
+      opacity: 0.5;
+    }
+
+    & > .current-operand {
+      font-size: 1.5rem;
+    }
+  }
+
+  & > .span-two {
+    grid-column: span 2;
+  }
+
+  & > button {
+    background-color: var(--secondary);
+    color: var(--text-light);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  & > button:hover {
+    background-color: var(--accent);
+  }
+
+  & > button:active {
+    background-color: var(--accent-dark);
+  }
+}
